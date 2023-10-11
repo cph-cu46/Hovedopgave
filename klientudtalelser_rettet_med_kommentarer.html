@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Media quari - for at gøre den responsive*/
+        @media screen and (min-width: 0px) {
+
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 20px;
+                padding-left: 20px;
+                text-align: center;
+            }
+
+            /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: white;
+            }
+        }
+
+
+
+        /* Media quari for at gøre den responsive */
+        @media screen and (min-width: 358px) {
+            
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                 /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 20px;
+                padding-left: 20px;
+                text-align: center;
+            }
+
+            /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: white;
+            }
+        }
+
+
+
+        /* Media quari for at gøre den responsive*/
+        @media screen and (min-width: 576px) {
+
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 50px;
+                padding-left: 50px;
+                text-align: center;
+            }
+
+            /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                padding: 16px;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: white;
+
+            }
+        }
+
+
+
+
+        /* Media quari for at gøre den responsive*/
+        @media screen and (min-width: 768px) {
+
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 100px;
+                padding-left: 100px;
+                text-align: center;
+            }
+
+           /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                padding: 16px;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: white;
+            }
+        }
+
+
+
+        /* Media quari for at gøre den responsive */
+        @media screen and (min-width: 992px) {
+
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 100px;
+                padding-left: 100px;
+                text-align: center;
+            }
+
+            /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                padding: 16px;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: white;
+            }
+        }
+
+
+
+
+        /* Media quari for at gøre den responsive*/
+        @media screen and (min-width: 1200px) {
+
+            /* Slides med text og author */
+            .mySlides {
+                display: none;
+                padding-bottom: 15px;
+
+                /* Ændret på margins for at pilene ikke ramte teksten/slides */
+                padding-right: 100px;
+                padding-left: 100px;
+                text-align: center;
+            }
+
+            /* Næste og forrige knapper */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                width: auto;
+                padding: 16px;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                color: black;
+            }
+        }
+
+
+
+
+
+        /* ANDET STYLE*/
+
+        /* Ændret næste knappens position til højre */
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Sat en bevægelseshover ind */
+        .prev:hover,
+        .next:hover {
+            transform: scale(1.2);
+        }
+
+        /* Prikkerne i bunden (container)*/
+        .dot-container {
+            text-align: center;
+            margin-top: -30px;
+        }
+
+        /* Prikkerne i bunden */
+        .dot {
+            cursor: pointer;
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            background-color: #545e70;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        /* Baggrundsfarve til den aktive prik */
+        .active,
+        .dot:hover {
+            background-color: black;
+        }
+
+        /* styler citaterne */
+        q {
+            font-style: italic;
+            color: black;
+        }
+
+       /* styler author */
+        .author {
+            color: black;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            /* background-color: #414D63; */
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Indhold i container-->
+        <div class="mySlides">
+            <q>Jeg oplever stadig angst, men efter at have gået hos dig kan jeg være med den og
+                opdager den inden det bliver for svært. Jeg har lært at det er OK at sige det højt.
+            </q>
+            <p class="author">- Karen 23 år</p>
+        </div>
+
+         <!-- Indhold i container-->
+        <div class="mySlides">
+            <q>Efter et langt forløb hos en stress coach som ellers var godt fik jeg endelig ”hul
+                igennem” og opdagede i terapi hos Claus. at det handlede om noget helt andet end
+                jobbet. Jeg havde ingen ide om hvor meget min svære opvækst havde påvirket mig i
+                mit voksenliv.
+            </q>
+            <p class="author">- Allan 36 år</p>
+        </div>
+
+         <!-- Indhold i container-->
+        <div class="mySlides">
+            <q>Efter 2 blodpropper som jeg heldigvis er kommet godt over oplevede jeg at være
+                konstant bange for at det skulle ske igen og selv den mindste ”mislyd” lammede mig.
+                Claus fik ro på angsten og jeg fik en del filosofiske læseanbefalinger og et fornyet
+                eksistentielt syn på livet.
+            </q>
+            <p class="author">- Peter 72 år</p>
+        </div>
+
+         <!-- Indhold i container-->
+        <div class="mySlides">
+            <q>Selv i de sværeste stunder hvor skrækkelige traumer fra min opvækst skreg ud i
+                rummet, sad Claus ved min side og var det roligste og mest klippefaste menneske
+                jeg nogensinde har oplevet ….det var ligesom om han fyldte rummet med ro og
+                kærlighed.
+            </q>
+            <p class="author">- Benjamin 42 år</p>
+        </div>
+
+
+
+        <!-- Næste og forrige knap -->
+
+        <!-- Definere når man klikker at den skal gå en tilbage -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+        <!-- "kode" for en tilbage pil &#10094;-->
+
+        <!-- Definere når man klikker at den skal gå en frem -->
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- "kode" for en frem pil &#10095; -->
+    </div>
+
+
+
+    <!-- Prikker defineres-->
+    <div class="dot-container">
+        <!-- Samme klasse, definere at der er 4 den kan rulle imellem -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+
+    <script>
+        // slideindex er en variable
+        // Sætter slideindex til 1
+        var slideIndex = 1;
+
+        // Kalder funktionen showSlides med værdien af slidindex (1)
+        showSlides(slideIndex);
+
+        // Den funktion der bliver brugt når man klikker fremad 
+        function plusSlides(n) {
+
+            // Plusslides går ned i (kalder funktionen) showslides 
+
+            // Sætter slideindex til det slideindexet er (slideindex er 1 lige nu) +n enten 1 eller -1 (se plusslides)
+            showSlides(slideIndex += n);
+        }
+
+        // Funktion som styre at man kan klikke frem og tilbage (at udtalelserne kommer frem) n er en parameter 
+        // som indeholder index man er på
+        // Bliver kaldt ovenfra (349)
+        function showSlides(n) {
+            // Definere en variable i
+            var i;
+            // Henter alle elementer der hedder "myslides" (udtalelserne) og ligger dem over i variablen slides
+            var slides = document.getElementsByClassName("mySlides");
+
+            // Henter alle elementer der hedder "dot" (prikkerne) og ligger dem over i variablen dots
+            var dots = document.getElementsByClassName("dot");
+
+            // Hvis n indeholder et tal som er større end antallet af udtalelser, så sættes index til 1, altså første slide om igen
+            // length indeholder antallet af udtalelser (myslides)
+            if (n > slides.length) { slideIndex = 1 }
+
+            // Hvis n er mindre end 1, så sætter den slideindex til 4. Så den går tilbage til det sidste slide
+            if (n < 1) { slideIndex = slides.length }
+
+            // kører alle slides igennem 
+            for (i = 0; i < slides.length; i++) {
+                // og sætter style.display=none. Beyder at den skjuler alle udtalelser
+                slides[i].style.display = "none";
+            }
+
+            // Kører alle dots igennem
+            for (i = 0; i < dots.length; i++) {
+                // For hver dot sætter den classname til blank
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            // Giver den "rigtige" udtalelse en style.display block. Betyder at den viser den aktive udtalelse
+            slides[slideIndex - 1].style.display = "block";
+            // Den rigtige prik bliver aktiv
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+    
+</body>
+</html>
